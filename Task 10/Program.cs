@@ -10,18 +10,19 @@
 //if (Number / 100 > 0) Console.WriteLine($"Третьей цифрой числа {Number} является цифра {Number / 10 % 10}");
 //else Console.WriteLine($"У числа {Number} нет третьей цифры");
 
-
 Console.WriteLine("Введите число:");
 
-int Number = Int.Parse(Console.ReadLine());
+int Number = int.Parse(Console.ReadLine());
 int NewNumber = 0;
-
 if(Number < 100) Console.WriteLine($"У числа {Number} нет третьей цифры");
-
-while (Number > 999)
+if(Number > 99 && Number < 1000) Console.WriteLine($"Третьей цифрой числа является {Number % 10}");
+else
 {
-     Number = (Number/10);
-     NewNumber= number;
-     return NewNumber;
+     while(Number > 999)
+    {
+     NewNumber = (Number/10);
+     //NewNumber = Number;// return NewNumber;
+    }
+     Console.WriteLine($"Третьей цифрой числа {Number} является цифра {NewNumber % 10}");
 }
-Console.WriteLine($"Третьей цифрой числа {Number} является цифра {NewNumber % 10}");
+
