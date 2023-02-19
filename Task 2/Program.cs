@@ -2,7 +2,7 @@
 // Дано число обозначающее день недели. Выяснить является номер дня недели выходным
 
 Console.WriteLine("Введите число:");
-int day = int.Parse (Console.ReadLine());
+int day = int.Parse (Console.ReadLine()??"");
 switch (day)
 {
     case 1: Console.WriteLine("Monday"); break;

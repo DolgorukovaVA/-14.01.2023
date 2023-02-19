@@ -3,7 +3,7 @@
 //Способ 1
 
 Console.WriteLine("Введите число из отрезка [10,99]:");
-int number = Int32.Parse(Console.ReadLine());
+int number = Int32.Parse(Console.ReadLine()??"");
 int numberA = number % 10;
 int numberB = number / 10;
 
