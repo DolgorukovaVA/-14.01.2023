@@ -12,17 +12,22 @@
 
 Console.WriteLine("Введите число:");
 
-int Number = int.Parse(Console.ReadLine());
+int Number = int.Parse(Console.ReadLine()??"");
 int NewNumber = 0;
 if(Number < 100) Console.WriteLine($"У числа {Number} нет третьей цифры");
-if(Number > 99 && Number < 1000) Console.WriteLine($"Третьей цифрой числа является {Number % 10}");
 else
 {
      while(Number > 999)
     {
-     NewNumber = (Number/10);
-     //NewNumber = Number;// return NewNumber;
+      Number = (Number/10);
+      NewNumber = Number;// return NewNumber;
     }
-     Console.WriteLine($"Третьей цифрой числа {Number} является цифра {NewNumber % 10}");
+    Console.WriteLine($"Третьей цифрой числа является цифра {Number % 10}");
+    while(Number > 99 && Number < 1000)
+    {
+     Number = (Number % 10);
+    } 
+    Console.WriteLine($"Третьей цифрой числа является {Number}");
+    //Console.WriteLine($"Третьей цифрой числа является {Number % 10}");
 }
 
